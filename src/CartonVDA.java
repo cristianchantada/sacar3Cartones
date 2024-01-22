@@ -1,6 +1,4 @@
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 class CartonVDA {
 	
@@ -35,7 +33,6 @@ class CartonVDA {
 		BolaBingo bolaNueva = new BolaBingo(limInf, limSup);
 		bolas[nBolasCarton] = new BolaBingo(bolaNueva);
 		nBolasCarton++;
-		//System.out.println("Sacada a bola " + nBolasCarton);
 
 		while (nBolas < numBolas) {
 			bolaNueva = new BolaBingo(limInf, limSup);
@@ -58,14 +55,6 @@ class CartonVDA {
 				bolas[nBolasCarton - 2].setNum(valorBola2);
 				bolas[nBolasCarton - 1].setNum(valorBola1);
 			}
-		}
-	}
-
-	void mostrarCartonVDA() {
-		System.out.println("Bolas que han salido");
-		for (int i = 0; i < BOLASTOTALES; i++) {
-			System.out.print("Bola " + i + ":");
-			System.out.println(bolas[i].getNum());
 		}
 	}
 
@@ -119,8 +108,4 @@ class CartonVDA {
 
 	}
 
-	void mostrarBolaCarton(int posicion) {
-		if (posicion < BOLASTOTALES)
-			System.out.println(bolas[posicion].getNum());
-	}
 }
